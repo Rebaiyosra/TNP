@@ -1,12 +1,12 @@
 
 <ul class="list-group">
-    <li class="list-group-item" [ngClass]="{'list-group-item': true,
-    'list-group-item-danger':disponiblite==false}" > <img [src]='image'> 
+    <li class="list-group-item"> <img [src]='image'  > 
+    Référence : {{id}}
+     
+    <button (click)="onModif(prix)" class='btn btn-info color-modifier'>Prix de Solde</button> 
+       <h5> {{nom | uppercase}} </h5>
+      <h4>prix : {{prix}} DTN</h4>
         
-        {{nom}}
-       prix : {{prix}} 
-       <button (click)="onModif(prix)"class="btn btn-primary">details</button><br>
-        Id : {{id}}
 
     </li>
 </ul>

@@ -6,6 +6,7 @@ import { ArticleListComponent } from './site/article-list/article-list.component
 import { ArticleComponent } from './site/article/article.component';
 import { AuthentifierComponent } from './site/authentifier/authentifier.component';
 import { AjouterArticleComponent } from './site/ajouter-article/ajouter-article.component';
+import { ArtPipe } from './art.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AjouterArticleComponent } from './site/ajouter-article/ajouter-article.
     ArticleListComponent,
     ArticleComponent,
     AuthentifierComponent,
-    AjouterArticleComponent
+    AjouterArticleComponent,
+    ArtPipe
   ],
   imports: [
     BrowserModule

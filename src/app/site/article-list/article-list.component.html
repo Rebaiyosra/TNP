@@ -1,4 +1,5 @@
-<div class="container"><h1>Nos articles</h1>
+<div class="container">
+<h1>Nos articles<img [src]="imageUrl | art:'../assets/e.png'"></h1>
 <app-article *ngFor="let A of Articles" 
     [id]="A.id"
     [nom]="A.nom"

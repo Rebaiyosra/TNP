@@ -20,11 +20,7 @@ export class ArticleComponent implements OnInit {
   @Input() id:String;
   @Input() prix:number;
   
-  onDetails(){
-    if(this.nom=='T-shirt'){
-      console.log (this.id);
-    }
-  }
+ 
 onModif(prix:number){
   this.artService.modifier(prix);
 }

@@ -1,2 +1,13 @@
-img{width:150px;
-height:150px;}
+img{width:200px;
+height:200px;}
+h4 {
+    color: red;
+}
+.color-modifier{
+    background-color:rgb(243, 65, 154);
+    border-color: rgb(243, 65, 154);
+}
+span {
+    font-style: italic;
+    color: indigo;
+}

@@ -1,12 +1,37 @@
-<h1>ajouter article</h1>
-<input type="text" #p> <br>
-<input type="text"  #n> <br>
-<select #m>
-    <option value="../assets/t.jpg">aaaaaaaa</option>
-    <option value="../assets/t.jpg">bbbbbb</option>
-    <option value="../assets/t.jpg">ccccc</option>
-</select><br>
-<input type="text"  #c> <br>
-<input type="text"  #l>
-<button (click)="onAdd(p.value,n.value,m.value,c.value,l.value)">ajouter</button>
-<button (click)="onSupp()">Supprimer</button>
+<h1>ajouter article<img [src]="imageUrl | art:'http://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg'"></h1>
+<table>
+    <tr>  
+        <td>Nom :</td> 
+        <td><input type="text" #p></td>
+    </tr>
+    <tr>   
+        <td>Refernce : </td>
+        <td><input type="text"  #n></td>    
+    </tr>
+    <tr>
+        <td>image : </td>
+        <td>
+            <select #m>
+                <option value="../assets/t.jpg">tee-shirt</option>
+                <option value="../assets/r.jpg">robe</option>
+                <option value="../assets/b.jpg">bottines</option>
+            </select> 
+        </td>
+    </tr>
+    <tr>    
+        <td>prix : </td>
+        <td><input type="text"  #c> </td>
+    </tr>
+    <tr>
+        <td>disponibilité : </td>
+        <td><input type="text"  #l></td>
+    </tr>
+    <tr>
+        <td>
+            <button (click)="onAdd(p.value,n.value,m.value,c.value,l.value)" class='btn btn-info color-modifier'>ajouter</button> 
+        </td>
+    <td>
+        <button (click)="onSupp()" class='btn btn-info color-modifier'>Supprimer</button>   
+    </td>
+    </tr>
+</table>
