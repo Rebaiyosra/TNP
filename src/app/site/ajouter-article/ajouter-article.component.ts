@@ -17,7 +17,5 @@ export class AjouterArticleComponent implements OnInit {
  onAdd(nom:string,id:string,image:string,prix:number,disponiblité:boolean){
    this.artService.ajouterArtcile(nom,id,image,prix,disponiblité);
  }
- onSupp(){
-   this.artService.supprimer()
- }
+
 }

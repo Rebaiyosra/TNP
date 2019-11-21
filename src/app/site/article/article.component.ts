@@ -24,4 +24,7 @@ export class ArticleComponent implements OnInit {
 onModif(prix:number){
   this.artService.modifier(prix);
 }
+onSupp(){
+  this.artService.supprimer()
+}
 }

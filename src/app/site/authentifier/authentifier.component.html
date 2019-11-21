@@ -1,4 +1,14 @@
 <h1>S'authentifier</h1>
-Nom :<input type="text" name="nom">
-Mot De Passe :<input type="password" name="pass" #p>
-<button (click)="onConnect(p.value)">Connecter</button>
+<table>
+    <tr>
+        <td>Nom :</td>
+        <td><input type="text" name="nom"></td>
+    </tr>
+    <tr>
+        <td>Mot De Passe :</td>
+        <td><input type="password" name="pass" #p></td>
+    </tr>
+    <tr>
+        <td><button (click)="onConnect(p.value)" class="btn btn-primary">Connecter</button></td>
+    </tr>
+</table>
