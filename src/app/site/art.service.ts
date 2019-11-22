@@ -1,30 +1,39 @@
 import { Injectable } from '@angular/core';
-
+import {Article} from './Article';
 @Injectable({
   providedIn: 'root'
 })
 export class ArtService {
-  articles=[
-    {nom:'palette fard à paupière "sophyx extra spice" revolution make up', id: 'e7f8', image: '../assets/p.jpg', prix:50, disponiblité:true},
-    {nom:'mascara "curling" artdeco',id:'f1d2',image:'../assets/m.jpg',prix:70,disponiblité:false},
-    {nom:'crayons yeux "KAJAL BLACK 2019" ARTDECO',id:'e4s8',image:'../assets/a.jpg',prix:120,disponiblité:true},
-    {nom:'HUDA BEAUTY Life Liner Double Ended Eyeliner Liquid & Pencil',id:'e5d4',image:'../assets/h.jpg',prix:150,disponiblité:true}
+  lesArticles=[
+    new Article ('palette fard à paupière "sophyx extra spice" revolution make up', 10,'../assets/p.jpg',50, true),
+    new Article ('mascara "curling" artdeco',30,'../assets/m.jpg',70,false),
+    new Article ('crayons yeux "KAJAL BLACK 2019" ARTDECO',45,'../assets/a.jpg',120,true),
+    new Article ('HUDA BEAUTY Life Liner Double Ended Eyeliner Liquid & Pencil',50,'../assets/h.jpg',150,true)
 
   ];
- ajouterArtcile(nom:string,id:string,image:string,prix:number,disponiblité:boolean){
-  this.articles.push({nom ,id,image,prix,disponiblité});
+  public ajouterArtcile(art:Article){
+    this.lesArticles.push(art);}
+    
+   
+ public modifier(index:number){
+  this.lesArticles[index].prix=this.lesArticles[index].prix-this.lesArticles[index].prix*0.2;
  }
- modifier(prix:number){
-  alert("Prix de solde : "+(prix-prix*0.2));
- }
- supprimer(){
-  this.articles.pop();
+ public supprimer(){
+  this.lesArticles.pop();
   
  }
- onDetails(nom:string,id:string){
+ /*onDetails(nom:string,id:string){
   if(nom=='T-shirt'){
     console.log (id);
   }
+}*/
+public getDetail(id:number){
+  for(let a of this.lesArticles){
+    if(a.id===id)
+    return a;
+  }
 }
+
+
   constructor() { }
 }

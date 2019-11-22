@@ -7,6 +7,11 @@ import { ArticleComponent } from './site/article/article.component';
 import { AuthentifierComponent } from './site/authentifier/authentifier.component';
 import { AjouterArticleComponent } from './site/ajouter-article/ajouter-article.component';
 import { ArtPipe } from './art.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { MenuComponent } from './site/menu/menu.component';
+import { DetailArticleComponent } from './site/detail-article/detail-article.component';
+import { ErreurComponent } from './site/erreur/erreur.component';
+
 
 @NgModule({
   declarations: [
@@ -15,10 +20,15 @@ import { ArtPipe } from './art.pipe';
     ArticleComponent,
     AuthentifierComponent,
     AjouterArticleComponent,
-    ArtPipe
+    ArtPipe,
+    MenuComponent,
+    DetailArticleComponent,
+    ErreurComponent,
+  
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
