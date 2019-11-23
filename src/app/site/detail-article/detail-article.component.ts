@@ -12,10 +12,11 @@ export class DetailArticleComponent implements OnInit {
   constructor(private artService:ArtService, private activatedRoute:ActivatedRoute) { }
  
   ngOnInit() {
-   this.lesArticles=this.artService.lesArticles; 
+  
    let ref=Number(this.activatedRoute.snapshot.params['id']);
-  // this.lesArticles=this.artService.getDetail(ref);
+  this.lesArticles=this.artService.getDetail(ref);
    
   }
-
+ 
+ 
 }
