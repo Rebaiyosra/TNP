@@ -25,13 +25,30 @@
         <td><input type="text"  #c> </td>
     </tr>
     <tr>
+        <td>
+            date de fabrication
+        </td>
+        <td><input type="date" #d></td>
+    </tr>
+    <tr>
         <td>disponibilité : </td>
         <td><input type="text"  #l></td>
     </tr>
     <tr>
+        <td>description : </td>
+        <td><input type="text"  #de></td>
+    </tr>
+    <tr>
+            <td>quantité : </td>
+            <td><input type="number"  #q></td>
+        </tr>
+    <tr>
         <td>
-            <button (click)="onAdd(p.value,n.value,m.value,c.value,l.value)" class='btn btn-info color-modifier'>ajouter</button> 
+            <button (click)="onAdd(p.value,n.value,m.value,c.value,l.value,d.value,de.value,q.value)" [routerLink]="['']" class='btn btn-info color-modifier'>ajouter</button> 
         </td>
     
     </tr>
 </table>
+
+<button (click)="onRech()">Recherche</button>
+{{a}}

@@ -1,13 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ArtService} from '../art.service';
 import {Article} from '../Article';
+import { Quote } from '@angular/compiler';
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  Articles:Article[]
+  Articles:any[]
  
   
   constructor(private artService:ArtService) { }
@@ -21,7 +22,8 @@ export class ArticleComponent implements OnInit {
   @Input() id:String;
   @Input() prix:number;
   @Input() dispo:boolean;
-  @Input() indexofarticle:number
+  @Input() indexofarticle:number;
+  @Input() qt:number;
   
  
 onModif(){
@@ -30,4 +32,8 @@ onModif(){
 onSupp(){
   this.artService.supprimer()
 }
+onlivrer(n:number)
+{
+  this.artService.livrer(n);
+} 
 }

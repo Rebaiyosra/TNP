@@ -7,11 +7,12 @@ import {Article} from '../Article';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
-  Articles:Article[]
+  Articles:any[];
   constructor(private artService:ArtService) { }
  
   ngOnInit() {
     this.Articles=this.artService.lesArticles;
+    
   }
 
 }

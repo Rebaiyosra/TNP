@@ -7,9 +7,13 @@
     <button (click)="onModif()" class='btn btn-info color-modifier'[disabled]="dispo==false" >Prix de Solde</button> 
        <h5> {{nom | uppercase}} </h5>
       <h4>prix : {{prix}} DTN</h4>
+      
         
       <button (click)="onSupp()" class='btn btn-info color-modifier' style="float:right">Supprimer</button>
       <a [routerLink]="[id]"> Détails</a>
+    
+      <button (click)="onlivrer(q.value)" class='btn btn-info color-modifier' style="float:right" [disabled]="dispo==false" >livrer</button>
+      <input type="number" #q style="float:right" [disabled]="dispo==false" >
     </li>
 </ul>
 

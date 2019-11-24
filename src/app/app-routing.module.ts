@@ -10,15 +10,18 @@ import { AjouterArticleComponent } from './site/ajouter-article/ajouter-article.
 import { DetailArticleComponent } from './site/detail-article/detail-article.component';
 import { ErreurComponent } from './site/erreur/erreur.component';
 import { ArtPipe } from './art.pipe';
-
-const routes:Routes=[
-  {path:'article-list' ,component:ArticleListComponent},
-  {path:'ajouter-article',component:AjouterArticleComponent},
-  {path:'article-list/:id',component:DetailArticleComponent},
-  {path:'authentifier',component:AuthentifierComponent},
-  {path:'',redirectTo:'article-list', pathMatch:'full'},
+import { MenuComponent } from './site/menu/menu.component';
+const routes: Routes = [
+  {path:'site/my-menu', component:MenuComponent},
+  {path:'site/article-list', component:ArticleListComponent},
+  {path:'site/article', component:ArticleComponent},
+  {path:'site/ajouter-article', component:AjouterArticleComponent},
+  {path:'site/authentifier', component:AuthentifierComponent},
+  {path:'site/article-list/:id', component:DetailArticleComponent},
+  {path:'', redirectTo:'site/article-list', pathMatch:'full'},
   {path:'**',component:ErreurComponent}
-];
+  ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -1,9 +1,32 @@
-<h4>Détail article</h4>
-
-<ul class="list-group">
-    <li class="list-group-item"><strong>{{lesArticles.id}}</strong></li>
-    <li class="list-group-item">{{lesArticles.nom | uppercase}}</li>
-    <li class="list-group-item">{{lesArticles.prix}}</li>
-    <li class="list-group-item"><input type="checkbox" disabled [checked]="lesArticles.dispo">disponiblité</li>
+<h2>Détail article</h2>
+<ng-container *ngFor="let a of lesArticles">
+<ul class="list-group" *ngIf="(a.id==identifiant)">
+    <li class="list-group-item" style="font-weight: bold;">
+        <span>Référence: </span>{{a.id}}
+    </li>
+    <li class="list-group-item">
+       <span>Nom de l'article: </span>{{a.nom}}
+    </li>
+    <li class="list-group-item">
+        <span>Prix: </span>{{a.prix}}
+    </li>
+    <li class="list-group-item">
+        <img src="{{a.image}}">
+    </li>
+    <li class="list-group-item">
+        <span>Date de mise en vente: </span>{{a.date |date}}
+    </li>
+    <li class="list-group-item">
+        <span>Description: </span>{{a.desc}}
+    </li>
+    <li class="list-group-item">
+        <span>Quantité: </span>{{a.qt}}
+    </li>
+    <li class="list-group-item">
+        <input type="checkbox" [checked]="a.dispo"> <span>Disponibilité</span>
+    </li>
+    <li class="list-group-item">
+        <button [routerLink]="['']" class="btn btn-primary">Retour au articles</button>
+    </li>    
 </ul>
-<button class="btn btn-primary" routerLink='/article-list'>Retour</button>
+</ng-container>
