@@ -7,23 +7,29 @@
 				<h3>Sign In</h3>
 			</div>
 			<div class="card-body">
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" class="form-control" placeholder="username" >
-						
+				<div class="input-group form-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-user"></i></span>
 					</div>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" class="form-control " name="pass" placeholder="password" [(ngModel)]="pass"> 
-                    </div>
-                    <span class="sp">{{a}}</span>
-					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn" >
+						<input type="text" class="form-control" name="usern" required placeholder="username" #usn="ngModel"  [(ngModel)]="usern">
 					</div>
+					<div [hidden]="!usn.errors?.required || usn.pristine" class="alert alert-danger">
+						le nom d'utilisateur est un champ obligatoire
+				</div>
+
+				<div class="input-group form-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-key"></i></span>
+					</div>
+					<input type="password" class="form-control " required name="pass" placeholder="password" #ps="ngModel" [(ngModel)]="pass"> 
+				</div>
+				<div [hidden]="!ps.errors?.required || ps.pristine" class="alert alert-danger">
+					Le mot de passe est un champ obligatoire
+				</div>
+                <span class="sp">{{a}}</span>
+				<div class="form-group">
+					<input type="submit" value="Login" class="btn float-right login_btn" >
+				</div>
 </div>
 </div>
 </div>

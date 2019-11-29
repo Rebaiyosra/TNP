@@ -7,7 +7,7 @@ import {Article} from '../Article';
   styleUrls: ['./article-list.component.css']
 })
 export class ArticleListComponent implements OnInit {
-  Articles:any[];
+  Articles:Article[];
  
   constructor(private artService:ArtService) { }
  

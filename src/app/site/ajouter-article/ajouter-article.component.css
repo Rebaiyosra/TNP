@@ -1,4 +1,26 @@
 .color-modifier{
-    background-color:rgb(243, 65, 154);
-    border-color: rgb(243, 65, 154);
+    background-color:#F0B014;
+    border-color: #F0B014;
 }
+input.ng-valid { border-left: 2px solid green; }
+input.ng-invalid { border-left: 2px solid red; }
+input,select{
+    width: 700px;
+}
+
+.container{
+    height: auto;
+    align-content: center;
+    }
+
+.card{
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 750px;
+    background-color: rgba(0,0,0,0.5) ;
+    }
+    
+.card-header h3{
+    color: white;
+    }

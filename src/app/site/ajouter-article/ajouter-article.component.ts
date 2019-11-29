@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./ajouter-article.component.css']
 })
 export class AjouterArticleComponent implements OnInit {
-  Articles:any[];
+  Articles:Article[];
   nom:string;
   id:string;
   image:string;
@@ -26,7 +26,7 @@ export class AjouterArticleComponent implements OnInit {
     this.Articles=this.artService.lesArticles;
   }
   onAdd(f:NgForm){
-    this.artService.addArticle(this.nom,this.id,this.image,this.prix,this.dispo,this.date,this.qt,this.desc);
+    this.artService.addArticle(this.id,this.nom,this.image,this.prix,this.dispo,this.date,this.qt,this.desc);
   }
  
 

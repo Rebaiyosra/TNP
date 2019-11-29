@@ -8,7 +8,7 @@ import {Article} from '../Article';
   styleUrls: ['./detail-article.component.css']
 })
 export class DetailArticleComponent implements OnInit {
-  lesArticles:any[]
+  lesArticles:Article[]
   identifiant:number;
 
 
