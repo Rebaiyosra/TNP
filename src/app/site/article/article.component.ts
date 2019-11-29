@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {ArtService} from '../art.service';
 import {Article} from '../Article';
-import { Quote } from '@angular/compiler';
+
 @Component({
   selector: 'app-article',
   templateUrl: './article.component.html',
@@ -29,11 +29,12 @@ export class ArticleComponent implements OnInit {
 onModif(){
   this.artService.modifier(this.indexofarticle);
 }
-onSupp(){
-  this.artService.supprimer()
+onSupp(id:string){
+  this.artService.supprimer(id);
 }
 onlivrer(n:number)
 {
   this.artService.livrer(n);
 } 
+
 }

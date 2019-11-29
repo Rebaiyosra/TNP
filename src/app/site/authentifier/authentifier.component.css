@@ -1,0 +1,39 @@
+.container{
+    height: 100%;
+    align-content: center;
+    }
+.sp{
+    color:red;
+}
+    .card{
+    height: 270px;
+    margin-top: 100px;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) ;
+    }
+    
+    .card-header h3{
+    color: white;
+    }
+    .input-group-prepend span{
+    width: 50px;
+    background-color: #F0B014;
+    color: black;
+    border:0 ;
+    }
+
+    
+   
+    
+    .login_btn{
+    color: black;
+    background-color: #F0B014;
+    width: 100px;
+    }
+    
+    .login_btn:hover{
+    color: black;
+    background-color: white;
+    }
+    

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ArtService} from '../art.service';
 import { Router } from '@angular/router';
+import {NgForm} from '@angular/forms';
+import { Article } from '../Article';
 
 
 @Component({
@@ -9,16 +11,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./authentifier.component.css']
 })
 export class AuthentifierComponent implements OnInit {
-  Articles:any[];
-  mdp="ahlem";
+  lesArticles:Article[];
+
+
   constructor(private artService:ArtService,private router: Router) { }
  
   ngOnInit() {
-    this.Articles=this.artService.lesArticles;
+    this.lesArticles=this.artService.lesArticles;
   }
 a:string  ;
-  onConnect(mdp1){
-    if (this.mdp==mdp1){
+pass:string;
+  onConnect(f:NgForm){
+    if (this.pass=="ahlem"){
       this.router.navigate(['site/article-list']);
     }else return this.a="mot de passe incorrect !";
   }

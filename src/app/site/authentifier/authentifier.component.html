@@ -1,15 +1,31 @@
-<h1>S'authentifier</h1>
-<table>
-    <tr>
-        <td>Nom :</td>
-        <td><input type="text" name="nom"></td>
-    </tr>
-    <tr>
-        <td>Mot De Passe :</td>
-        <td><input type="password" name="pass" #p></td> {{a}}
-    </tr>
-    
-    <tr>
-        <td><button (click)="onConnect(p.value)" class="btn btn-primary">Connecter</button></td>
-    </tr>
-</table>
+
+	<form (ngSubmit)="onConnect(f)" #f="ngForm">
+	<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="username" >
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control " name="pass" placeholder="password" [(ngModel)]="pass"> 
+                    </div>
+                    <span class="sp">{{a}}</span>
+					<div class="form-group">
+						<input type="submit" value="Login" class="btn float-right login_btn" >
+					</div>
+</div>
+</div>
+</div>
+</div>
+</form>

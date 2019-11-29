@@ -1,54 +1,45 @@
 <h1>ajouter article<img [src]="imageUrl | art:'http://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg'"></h1>
-<table>
-    <tr>  
-        <td>Nom :</td> 
-        <td><input type="text" #p></td>
-    </tr>
-    <tr>   
-        <td>Refernce : </td>
-        <td><input type="text"  #n></td>    
-    </tr>
-    <tr>
-        <td>image : </td>
-        <td>
-            <select #m>
+<form (ngSubmit)="onAdd(f);onNavigate()" #f="ngForm">
+    
+  <div class="form-group">
+    <label for="ref">Reference </label>
+    <input type="text" id="ref" name="id"  class="form-control" [(ngModel)]="id" required #reference="ngModel">
+</div>
+<div class="form-group">
+    <label for="n">Nom </label>
+    <input type="text" id="n" name="nom"  class="form-control" [(ngModel)]="nom" required #name="ngModel">
+</div> 
+<label for="img">Image </label>
+        
+            <select class="form-control" id="img" name="image" [(ngModel)]="image">
                 <option value="../assets/r.jpg">rouge a levre</option>
                 <option value="../assets/f.jpg">fondation</option>
                 <option value="../assets/c.jpg">contour</option>
                 <option value="../assets/ha.jpg">highlighter</option>
                 <option value="../assets/primer.jpg">primer</option>
             </select> 
-        </td>
-    </tr>
-    <tr>    
-        <td>prix : </td>
-        <td><input type="text"  #c> </td>
-    </tr>
-    <tr>
-        <td>
-            date de fabrication
-        </td>
-        <td><input type="date" #d></td>
-    </tr>
-    <tr>
-        <td>disponibilité : </td>
-        <td><input type="text"  #l></td>
-    </tr>
-    <tr>
-        <td>description : </td>
-        <td><input type="text"  #de></td>
-    </tr>
-    <tr>
-            <td>quantité : </td>
-            <td><input type="number"  #q></td>
-        </tr>
-    <tr>
-        <td>
-            <button (click)="onAdd(p.value,n.value,m.value,c.value,l.value,d.value,de.value,q.value)" [routerLink]="['']" class='btn btn-info color-modifier'>ajouter</button> 
-        </td>
-    
-    </tr>
-</table>
-
-<button (click)="onRech()">Recherche</button>
-{{a}}
+       
+   
+            <div class="form-group">
+                <label for="pr">Prix </label>
+                <input type="text" id="pr" name="prix"  class="form-control" [(ngModel)]="prix" required #p="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="d">date de fabrication </label>
+                <input type="date" id="d" name="date"  class="form-control" [(ngModel)]="date" required #ddf="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="di">Disponibilité </label>
+                <input type="text" id="di" name="dispo"  class="form-control" [(ngModel)]="dispo" required #dis="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="de">description </label>
+                <input type="text" id="de" name="desc"  class="form-control" [(ngModel)]="desc" required #des="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="q">Quantité </label>
+                <input type="text" id="q" name="qt"  class="form-control" [(ngModel)]="qt" required #qu="ngModel">
+            </div>
+      
+            <button type ="submit"class='btn btn-info color-modifier'>ajouter</button> 
+</form>

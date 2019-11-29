@@ -12,11 +12,13 @@ export class DetailArticleComponent implements OnInit {
   identifiant:number;
 
 
-  constructor(private artService:ArtService,private activatedRoute:ActivatedRoute) { }
+  constructor(private artService:ArtService,private activatedRoute:ActivatedRoute,private router:Router) { }
 
   ngOnInit() {
     this.lesArticles=this.artService.lesArticles;
     this.identifiant = this.activatedRoute.snapshot.params['id'];
   }
-
+  onNavigate(){
+    this.router.navigate(['site/article-list']);
+  }
 }

@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {NgForm} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ArticleListComponent } from './site/article-list/article-list.component';
@@ -11,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MenuComponent } from './site/menu/menu.component';
 import { DetailArticleComponent } from './site/detail-article/detail-article.component';
 import { ErreurComponent } from './site/erreur/erreur.component';
+import { StarPipe } from './star.pipe';
 
 
 @NgModule({
@@ -24,11 +27,13 @@ import { ErreurComponent } from './site/erreur/erreur.component';
     MenuComponent,
     DetailArticleComponent,
     ErreurComponent,
+    StarPipe,
   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

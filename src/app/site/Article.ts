@@ -1,6 +1,6 @@
 export class Article{
-
-    constructor(private _nom: string,private _id: string,private _image: string,private _prix: number,private _dispo: boolean, private _date: Date){}
+    constructor(private _nom: string,private _id: string,private _image: string,
+        private _prix: number,private _dispo: boolean, private _date: Date,private _qt: number,private _desc: string){}
     public get nom(): string {
         return this._nom;
     }
@@ -38,5 +38,16 @@ export class Article{
     public set date(value: Date) {
         this._date = value;
     }
-    
+    public get desc(): string {
+        return this._desc;
+    }
+    public set desc(value: string) {
+        this._desc = value;
+    }
+    public get qt(): number {
+        return this._qt;
+    }
+    public set qt(value: number) {
+        this._qt = value;
+    }
 }
