@@ -5,10 +5,17 @@
     Référence : {{id}}
      
     <button (click)="onModif()" class='btn btn-info color-modifier'[disabled]="dispo==false" >Prix de Solde</button> 
-       <h5> {{nom | uppercase | star}} </h5>
+       <h5> {{nom | uppercase}} </h5>
+
+        <ul class="list-inline rating-list" *ngFor="let star of stars">
+          <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
+            <i class="fa fa-star"></i>
+          </li> 
+        </ul>
+       
       <h4>prix : {{prix}} DTN</h4>
+
       
-        
       <button (click)="onSupp(id)" class='btn btn-info color-modifier' style="float:right">Supprimer</button>
       <a [routerLink]="[id]"> Détails</a>
     

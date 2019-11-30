@@ -5,10 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class StarPipe implements PipeTransform {
 
-  transform(nom:string,qt:number): string {
-    if(nom.length<30){
-    return nom+' ☆☆☆☆☆';}
-    else return nom;
+  transform(prix:number): string{
+    if(prix>70) return prix+'DTN ☆☆☆☆☆';
+    else if(prix>35) return prix+'DTN ☆☆☆☆';
+    else if(prix>20) return prix+'DTN ☆☆☆';
+    else return prix+'DTN';
   }
 
 }

@@ -8,7 +8,9 @@ import {Article} from '../Article';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  Articles:any[]
+  Articles:any[];
+  stars: number[] = [1, 2, 3, 4, 5];
+  selectedValue: number;
  
   
   constructor(private artService:ArtService) { }
@@ -35,6 +37,11 @@ onSupp(id:string){
 onlivrer(n:number)
 {
   this.artService.livrer(n);
-} 
+}
+
+countStar(star) {
+  this.selectedValue = star;
+  console.log('Value of star', star);
+}
 
 }
