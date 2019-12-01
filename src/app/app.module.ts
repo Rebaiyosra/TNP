@@ -14,6 +14,7 @@ import { MenuComponent } from './site/menu/menu.component';
 import { DetailArticleComponent } from './site/detail-article/detail-article.component';
 import { ErreurComponent } from './site/erreur/erreur.component';
 import { StarPipe } from './star.pipe';
+import { FilterPipe } from './filter.pipe';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { StarPipe } from './star.pipe';
     DetailArticleComponent,
     ErreurComponent,
     StarPipe,
+    FilterPipe,
   
   ],
   imports: [

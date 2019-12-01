@@ -1,7 +1,7 @@
 
 <ul class="list-group"  >
-    <li class="list-group-item"  [ngClass]="{'list-group-item': true,
-    'list-group-item-danger':dispo==false}"> <img [src]='image'  > 
+    <li class="list-group-item"  [ngClass]="{'list-group-item': true,'list-group-item-danger':dispo==false}">
+      <img [src]='image'  > 
     Référence : {{id}}
      
     <button (click)="onModif()" class='btn btn-info color-modifier'[disabled]="dispo==false" >Prix de Solde</button> 
@@ -21,6 +21,7 @@
     
       <button (click)="onlivrer(q.value)" class='btn btn-info color-modifier' style="float:right" [disabled]="dispo==false" >livrer</button>
       <input type="number" #q style="float:right" [disabled]="dispo==false" >
+
     </li>
    
 </ul>

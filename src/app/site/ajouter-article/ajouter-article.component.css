@@ -2,6 +2,10 @@
     background-color:#F0B014;
     border-color: #F0B014;
 }
+img{
+    height: 50px;
+    width: 50px;
+}
 input.ng-valid { border-left: 2px solid green; }
 input.ng-invalid { border-left: 2px solid red; }
 input,select{
@@ -22,5 +26,6 @@ input,select{
     }
     
 .card-header h3{
-    color: white;
+    color: #F0B014;
+    text-align: center;
     }

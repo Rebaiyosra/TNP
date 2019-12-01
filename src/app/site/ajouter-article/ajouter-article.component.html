@@ -2,7 +2,7 @@
 <div class="row justify-content-center">
     <div class="card">
         <div class="card-header">
-<h3>Ajouter article<img [src]="imageUrl | art:'http://s3.amazonaws.com/uifaces/faces/twitter/sillyleo/128.jpg'"></h3>
+<h3>Ajouter article<img [src]="imageUrl | art:'../assets/article.png'"></h3>
         </div>
         <div class="card-body">
 
@@ -43,7 +43,7 @@
 
 
 <div class="form-group">
-    <label for="d">date de fabrication </label>
+    <label for="d">Date de fabrication </label>
     <input type="date" id="d" name="date"  class="form-control" [(ngModel)]="date" required #ddf="ngModel">
  </div>
 
@@ -57,7 +57,7 @@
 
 
 <div class="form-group">
-    <label for="de">description </label>
+    <label for="de">Description </label>
     <input type="text" id="de" name="desc" class="form-control" [(ngModel)]="desc" required #des="ngModel">
 </div>
 
@@ -72,7 +72,7 @@
 <div *ngIf="qu.invalid && qu.dirty" class="alert alert-danger">La quantité doit être un nombre</div>
 
 <div class="form-group">
-<button type ="submit"class='btn btn-info float-right color-modifier '>ajouter</button> 
+<button type ="submit"class='btn btn-info float-right color-modifier '>Ajouter</button> 
 </div>
 </div>
     </div>

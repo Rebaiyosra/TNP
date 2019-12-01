@@ -11,7 +11,6 @@ export class ArticleComponent implements OnInit {
   Articles:any[];
   stars: number[] = [1, 2, 3, 4, 5];
   selectedValue: number;
- 
   
   constructor(private artService:ArtService) { }
  
