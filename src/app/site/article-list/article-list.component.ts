@@ -8,7 +8,7 @@ import {Article} from '../Article';
 })
 export class ArticleListComponent implements OnInit {
   Articles:Article[];
-
+  name:string="";
   constructor(private artService:ArtService) { }
  
   ngOnInit() {

@@ -1,7 +1,17 @@
-
+<div class="main">
+  
+       
+        <div class="form-group has-search">
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="text" class="form-control" [(ngModel)]="name" placeholder="rechercher...">
+        </div>
+</div> <br>
 <div class="container">
-<h1>Nos articles<img [src]="imageUrl | art:'../assets/e.png'"></h1>
-<app-article *ngFor="let A of Articles;let i=index" 
+<h1><img [src]="imageUrl | art:'../assets/logo1.jpg'">Nos articles</h1>
+
+<br>
+<ng-container  *ngFor="let A of Articles;let i=index"> 
+<app-article *ngIf="(A.nom.toUpperCase().indexOf(name.toUpperCase())!=-1)"
 
     [id]="A.id"
     [nom]="A.nom"
@@ -11,5 +21,5 @@
     [dispo]="A.dispo"
    
 ></app-article>
-
+</ng-container>
 </div>

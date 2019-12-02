@@ -1,8 +1,2 @@
 <app-menu></app-menu>
-<input type="search"  [(ngModel)]="search">
-<div *ngFor="let A of (Articles | filter:search)">
-        {{A.id}}
-        {{A.nom}}
-      
-      </div>
 <router-outlet></router-outlet>

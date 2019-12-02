@@ -6,21 +6,15 @@
      
     <button (click)="onModif()" class='btn btn-info color-modifier'[disabled]="dispo==false" >Prix de Solde</button> 
        <h5> {{nom | uppercase}} </h5>
-
-        <ul class="list-inline rating-list" *ngFor="let star of stars">
-          <li (click)="countStar(star)" [ngClass]="{'selected': (star <= selectedValue)}">
-            <i class="fa fa-star"></i>
-          </li> 
-        </ul>
        
-      <h4>prix : {{prix}} DTN</h4>
+      <h4>prix : {{prix | star}} </h4>
 
       
       <button (click)="onSupp(id)" class='btn btn-info color-modifier' style="float:right">Supprimer</button>
       <a [routerLink]="[id]"> Détails</a>
     
       <button (click)="onlivrer(q.value)" class='btn btn-info color-modifier' style="float:right" [disabled]="dispo==false" >livrer</button>
-      <input type="number" #q style="float:right" [disabled]="dispo==false" >
+      <input type="number" #q style="float:right" [disabled]="dispo==false" > {{s}}
 
     </li>
    

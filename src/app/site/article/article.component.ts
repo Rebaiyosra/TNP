@@ -38,9 +38,5 @@ onlivrer(n:number)
   this.artService.livrer(n);
 }
 
-countStar(star) {
-  this.selectedValue = star;
-  console.log('Value of star', star);
-}
 
 }

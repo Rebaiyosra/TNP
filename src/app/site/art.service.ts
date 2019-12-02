@@ -19,13 +19,7 @@ export class ArtService {
     'En achetant ce produit vous pouvez obtenir 7 points. Votre panier vous rapportera 7 points qui peuvent être converti en un bon de réduction de 3,500 TND.')
 
   ];
-  lesImages=[
-    {image:"../assets/r.jpg"},
-    {image:"../assets/f.jpg"},
-    {image:"../assets/c.jpg"},
-    {image:"../assets/ha.jpg"},
-    {image:"../assets/primer.jpg"}
-  ]
+  
   public getProduitById(id:string){
     for (let i=0;i<this.lesArticles.length;i++)
     if(this.lesArticles[i].id==id)
@@ -57,14 +51,19 @@ export class ArtService {
    
  public modifier(index:number){
   this.lesArticles[index].prix=this.lesArticles[index].prix-this.lesArticles[index].prix*0.2;
- this.lesArticles[index].image=this.lesImages[index].image;
+
  }
+
 public livrer(n:number){
+  
   for(let a of this.lesArticles){
-    while(a.qt>0){a.qt-=n;};
-    if(a.qt===0){
-      a.dispo=false; 
+     if(n<=a.qt)
+      a.qt-=n;
+    else if(n>a.qt){
+      console.log("stock");
+      a.qt=a.qt;
     }
+   if(a.qt===0){a.dispo=false;}
   } 
 }
 s:number=0;
