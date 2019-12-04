@@ -11,3 +11,7 @@ img{
 .dec:hover{
     color: #F0B014;
 }
+.color-modifier{
+    background-color:rgb(243, 65, 154);
+    border-color: rgb(243, 65, 154);
+}

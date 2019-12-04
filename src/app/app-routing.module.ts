@@ -11,6 +11,7 @@ import { ArtPipe } from './art.pipe';
 import { MenuComponent } from './site/menu/menu.component';
 import { DetailArticleComponent } from './site/detail-article/detail-article.component';
 import { ErreurComponent } from './site/erreur/erreur.component';
+import { ModifierArticleComponent } from './site/modifier-article/modifier-article.component';
 const routes: Routes = [
   {path:'site/my-menu', component:MenuComponent},
   {path:'site/article-list', component:ArticleListComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'site/ajouter-article', component:ArticleListComponent},
   {path:'site/authentifier', component:AuthentifierComponent},
   {path:'site/article-list/:id', component:DetailArticleComponent},
+  {path:'site/modifier-article', component:ModifierArticleComponent},
   {path:'', redirectTo:'site/authentifier', pathMatch:'full'},
   {path:'**',component:ErreurComponent}
   ];

@@ -73,7 +73,7 @@
 <div *ngIf="qu.invalid && qu.dirty" class="alert alert-danger">La quantité doit être un nombre</div>
 
 <div class="form-group">
-<button type ="submit"class='btn btn-info float-right color-modifier '>Ajouter</button> 
+<button type ="submit"class='btn btn-info float-right color-modifier' [disabled]="f.invalid">Ajouter</button> 
 </div>
 </div>
     </div>

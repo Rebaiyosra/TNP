@@ -9,8 +9,8 @@ import {Article} from '../Article';
 })
 export class ArticleComponent implements OnInit {
   Articles:any[];
-  stars: number[] = [1, 2, 3, 4, 5];
-  selectedValue: number;
+ 
+  
   
   constructor(private artService:ArtService) { }
  
@@ -27,9 +27,7 @@ export class ArticleComponent implements OnInit {
   @Input() qt:number;
   
  
-onModif(){
-  this.artService.modifier(this.indexofarticle);
-}
+
 onSupp(id:string){
   this.artService.supprimer(id);
 }

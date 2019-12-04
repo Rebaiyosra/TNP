@@ -1,0 +1,79 @@
+<form (ngSubmit)="onModif(f)" #f="ngForm">
+    <div class="row justify-content-center">
+
+    <h3>Ajouter article</h3>
+            </div>
+            
+    
+    
+        
+    <div class="form-group">
+        <label for="ref">Reference </label>
+        <input type="text" id="ref" name="id" placeholder="Entrer unr référence" class="form-control">
+    </div>
+    
+  
+        
+    <div class="form-group">
+        <label for="n">Nom </label>
+        <input type="text" id="n" placeholder="Enter un nom d'article" name="nom" pattern="[A-Z][a-zA-Z]+"  class="form-control" [(ngModel)]="nom" required #name="ngModel">
+    </div> 
+    
+    <div *ngIf="name.errors?.pattern && name.dirty" class="alert alert-danger">Le nom a un format incorrect</div>
+    
+    <div class="form-group">
+    <label for="img">Image </label>
+        <select class="form-control" id="img" name="image" [(ngModel)]="image" required #im="ngModel"> 
+            <option value="../assets/r.jpg">rouge a levre</option>
+            <option value="../assets/f.jpg">fondation</option>
+            <option value="../assets/c.jpg">contour</option>
+            <option value="../assets/ha.jpg">highlighter</option>
+            <option value="../assets/primer.jpg">primer</option>
+        </select> 
+    </div>     
+    <div [hidden]="!im.errors?.required || im.pristine" class="alert alert-danger">La réference est un champ obligatoire</div>
+    
+    <div class="form-group">
+        <label for="pr">Prix </label>
+        <input type="number" id="pr" name="prix" placeholder="Entrer un prix" class="form-control" [(ngModel)]="prix" required #p="ngModel">
+    </div>
+    
+    <div *ngIf="p.invalid && p.dirty" class="alert alert-danger">Le prix doit être un nombre</div>
+    
+    
+    <div class="form-group">
+        <label for="d">Date de fabrication </label>
+        <input type="date" id="d" name="date"  class="form-control" [(ngModel)]="date" required #ddf="ngModel">
+     </div>
+    
+    
+    <div class="form-group">
+        <label for="di">Disponibilité </label>
+        <input type="text" id="di" name="dispo" placeholder="Ecriver true ou false"  pattern="true|false" class="form-control" [(ngModel)]="dispo" required #dis="ngModel">
+    </div>
+    
+    <div *ngIf="dis.errors?.pattern && dis.dirty" class="alert alert-danger">La disponibilité a un format incorrect</div>
+    
+    
+    <div class="form-group">
+        <label for="de">Description </label>
+        <input type="text" id="de" name="desc" placeholder="Ecriver une description" class="form-control" [(ngModel)]="desc" required #des="ngModel">
+    </div>
+    
+    <div *ngIf="des.invalid && des.dirty" class="alert alert-danger">La description a un format incorrect</div>
+    
+    
+    <div class="form-group">
+        <label for="q">Quantité </label>
+        <input type="number" id="q" name="qt" placeholder="Entrer une quantité" class="form-control" [(ngModel)]="qt" required #qu="ngModel">
+    </div>
+    
+    <div *ngIf="qu.invalid && qu.dirty" class="alert alert-danger">La quantité doit être un nombre</div>
+    
+    <div class="form-group">
+    <button type ="submit"class='btn btn-info float-right color-modifier' [disabled]="f.invalid">Ajouter</button> 
+    </div>
+    </div>
+        </div>
+    </div>
+    </form>

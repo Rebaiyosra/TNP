@@ -12,7 +12,7 @@
 <br>
 <ng-container  *ngFor="let A of Articles;let i=index"> 
 <app-article *ngIf="(A.nom.toUpperCase().indexOf(name.toUpperCase())!=-1)"
-
+ 
     [id]="A.id"
     [nom]="A.nom"
     [image]="A.image"

@@ -49,8 +49,15 @@ export class ArtService {
   
    
    
- public modifier(index:number){
-  this.lesArticles[index].prix=this.lesArticles[index].prix-this.lesArticles[index].prix*0.2;
+ public modifier(nom: string,id: string,image: string,prix: number,dispo: boolean, date: Date,qt: number,desc: string){
+ 
+  let A:Article=this.getProduitById(id);
+  A.nom=nom;
+  A.image=image;
+  A.prix=prix;
+  A.dispo=dispo;
+  A.date=date;
+  A.desc=desc;
 
  }
 
