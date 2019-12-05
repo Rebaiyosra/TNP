@@ -10,14 +10,13 @@
 <h1><img [src]="imageUrl | art:'../assets/logo1.jpg'">Nos articles</h1>
 
 <br>
-<ng-container  *ngFor="let A of Articles;let i=index"> 
+<ng-container  *ngFor="let A of Articles"> 
 <app-article *ngIf="(A.nom.toUpperCase().indexOf(name.toUpperCase())!=-1)"
  
     [id]="A.id"
     [nom]="A.nom"
     [image]="A.image"
     [prix]="A.prix"
-    [indexofarticle]="i"
     [dispo]="A.dispo"
    
 ></app-article>

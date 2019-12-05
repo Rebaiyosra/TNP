@@ -12,10 +12,6 @@
       
       <button (click)="onSupp(id)" class='btn btn-info color-modifier' style="float:right">Supprimer</button>
       <a [routerLink]="[id]"> Détails</a>
-    
-      <button (click)="onlivrer(q.value)" class='btn btn-info color-modifier' style="float:right" [disabled]="dispo==false" >livrer</button>
-      <input type="number" #q style="float:right" [disabled]="dispo==false" > 
-
     </li>
    
 </ul>

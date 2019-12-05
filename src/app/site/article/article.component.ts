@@ -23,7 +23,6 @@ export class ArticleComponent implements OnInit {
   @Input() id:String;
   @Input() prix:number;
   @Input() dispo:boolean;
-  @Input() indexofarticle:number;
   @Input() qt:number;
   
  
@@ -31,10 +30,7 @@ export class ArticleComponent implements OnInit {
 onSupp(id:string){
   this.artService.supprimer(id);
 }
-onlivrer(n:number)
-{
-  this.artService.livrer(n);
-}
+
 
 
 }

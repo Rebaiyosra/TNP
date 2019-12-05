@@ -21,4 +21,18 @@ export class DetailArticleComponent implements OnInit {
   onNavigate(){
     this.router.navigate(['site/article-list']);
   }
-}
+
+  msg:string;
+  public livrer(n:number){
+    for(let a of this.lesArticles){
+       if(n<=a.qt){
+        a.qt-=n;
+        return this.msg="commande fait avec succées";}
+      else if(n>a.qt){
+        return this.msg="stock insuffissante!";
+      }
+     if(a.qt===0){a.dispo=false;}
+    } 
+  }
+  }
+

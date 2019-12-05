@@ -15,7 +15,7 @@ export class AjouterArticleComponent implements OnInit {
   id:string;
   image:string;
   prix:number;
-  dispo:boolean;
+  dispo:boolean=false;
   date:Date;
   desc:string
   qt:number;

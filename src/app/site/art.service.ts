@@ -22,8 +22,11 @@ export class ArtService {
   
   public getProduitById(id:string){
     for (let i=0;i<this.lesArticles.length;i++)
-    if(this.lesArticles[i].id==id)
-    return this.lesArticles[i];
+    {
+      if(this.lesArticles[i].id==id)
+      return this.lesArticles[i];
+    }
+    
     return null;
 
  }
@@ -50,40 +53,15 @@ export class ArtService {
    
    
  public modifier(nom: string,id: string,image: string,prix: number,dispo: boolean, date: Date,qt: number,desc: string){
- 
   let A:Article=this.getProduitById(id);
   A.nom=nom;
   A.image=image;
   A.prix=prix;
   A.dispo=dispo;
   A.date=date;
+  A.qt=qt;
   A.desc=desc;
-
  }
-
-public livrer(n:number){
-  
-  for(let a of this.lesArticles){
-     if(n<=a.qt)
-      a.qt-=n;
-    else if(n>a.qt){
-      console.log("stock");
-      a.qt=a.qt;
-    }
-   if(a.qt===0){a.dispo=false;}
-  } 
-}
-s:number=0;
-public rech(){
- 
-  for(let i=0;i<this.lesArticles.length;i++)
-  {
-    if(this.lesArticles[i].prix>30)
-    this.lesArticles.indexOf;
-  }
-  return this.lesArticles
-}
-
 
   constructor() { }
 }

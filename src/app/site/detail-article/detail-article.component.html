@@ -31,3 +31,8 @@
     </li>    
 </ul>
 </ng-container>
+<div>
+<label> Quantité de livraison : <input type="number" #q  [disabled]="dispo==false" > </label> <br>
+<button (click)="livrer(q.value)" class='btn btn-info color-modifier'  [disabled]="dispo==false" >livrer</button>
+{{msg}}
+</div>
