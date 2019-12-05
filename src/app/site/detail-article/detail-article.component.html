@@ -3,7 +3,7 @@
 <ng-container *ngFor="let a of lesArticles">
 <ul class="list-group" *ngIf="(a.id==identifiant)">
     <li class="list-group-item" style="font-weight: bold;">
-        <span>Référence: </span>{{a.id}}
+        <span >Référence: </span>{{a.id}}
     </li>
     <li class="list-group-item">
        <span>Nom de l'article: </span>{{a.nom | uppercase}}
@@ -32,7 +32,7 @@
 </ul>
 </ng-container>
 <div>
-<label> Quantité de livraison : <input type="number" #q  [disabled]="dispo==false" > </label> <br>
-<button (click)="livrer(q.value)" class='btn btn-info color-modifier'  [disabled]="dispo==false" >livrer</button>
+<label> Quantité de livraison : <input type="number" #q   > </label> <br>
+<button (click)="livrer(q.value)" class='btn btn-info color-modifier'  >livrer</button>
 {{msg}}
 </div>

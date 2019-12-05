@@ -9,13 +9,13 @@ export class ArtService {
     new Date(2019,5,15),10
     ,'En achetant ce produit vous pouvez obtenir 4 points. Votre panier vous rapportera 4 points qui peuvent être converti en un bon de réduction de 2,000 TND.'),
     new Article('mascara "curling" artdeco','f1d2','../assets/m.jpg',
-   34.900,false,new Date(2019,5,15),20,
+   34.900,false,new Date(2019,4,15),0,
     'En achetant ce produit vous pouvez obtenir 3 points. Votre panier vous rapportera 3 points qui peuvent être converti en un bon de réduction de 1,500 TND.'),
     new Article('crayons yeux "KAJAL BLACK 2019" ARTDECO','e4s8','../assets/a.jpg',
-    18.900,true,new Date(2019,5,15),8,
+    18.900,true,new Date(2019,10,16),8,
     'En achetant ce produit vous pouvez obtenir 1 point. Votre panier vous rapportera 1 point qui peuvent être converti en un bon de réduction de 0,500 TND.'),
     new Article('HUDA BEAUTY Life Liner Double Ended Eyeliner Liquid & Pencil','e5d4','../assets/h.jpg',
-   78.800,true,new Date(2019,5,15),15,
+   78.800,true,new Date(2019,12,1),15,
     'En achetant ce produit vous pouvez obtenir 7 points. Votre panier vous rapportera 7 points qui peuvent être converti en un bon de réduction de 3,500 TND.')
 
   ];

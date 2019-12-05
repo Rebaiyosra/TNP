@@ -9,7 +9,8 @@ import {Article} from '../Article';
 })
 export class DetailArticleComponent implements OnInit {
   lesArticles:Article[]
-  identifiant:number;
+  identifiant:string;
+  obj:Article;
 
 
   constructor(private artService:ArtService,private activatedRoute:ActivatedRoute,private router:Router) { }
@@ -23,16 +24,18 @@ export class DetailArticleComponent implements OnInit {
   }
 
   msg:string;
+
   public livrer(n:number){
-    for(let a of this.lesArticles){
-       if(n<=a.qt){
-        a.qt-=n;
-        return this.msg="commande fait avec succées";}
-      else if(n>a.qt){
-        return this.msg="stock insuffissante!";
-      }
-     if(a.qt===0){a.dispo=false;}
-    } 
+    this.obj=this.artService.getProduitById(this.identifiant);
+    if(n<=this.obj.qt){
+      this.obj.qt-=n;
+      if(this.obj.qt===0){this.obj.dispo=false;
+      return this.msg="commande fait avec succées";}}
+    else if(n>this.obj.qt){
+      return this.msg="stock insuffissante!";
+    }
+   
+    
   }
   }
 
