@@ -29,10 +29,11 @@ export class DetailArticleComponent implements OnInit {
     this.obj=this.artService.getProduitById(this.identifiant);
     if(n<=this.obj.qt){
       this.obj.qt-=n;
+      this.msg="commande fait avec succées";
       if(this.obj.qt===0){this.obj.dispo=false;
-      return this.msg="commande fait avec succées";}}
+      }}
     else if(n>this.obj.qt){
-      return this.msg="stock insuffissante!";
+      this.msg="stock insuffissante!";
     }
    
     

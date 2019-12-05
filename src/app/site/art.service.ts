@@ -61,6 +61,9 @@ export class ArtService {
   A.date=date;
   A.qt=qt;
   A.desc=desc;
+  if(A.qt>0){
+    A.dispo=true;
+  }
  }
 
   constructor() { }

@@ -1,9 +1,11 @@
 <form [formGroup]="modifForm" (ngSubmit)="modif()">
 
         <div class="row justify-content-center">
-    
-        <h3>Modifier article</h3>
-        </div>
+                <div class="card">
+                <div class="card-header">
+                        <h3>Modifier article</h3>
+                </div>
+                <div class="card-body"> 
                 
         
         
@@ -86,5 +88,8 @@
         </div>
         <div class="form-group">
         <button type ="submit" class='btn btn-info float-right color-modifier' [disabled]="modifForm.invalid" >Modifier</button> 
+        </div>
+        </div>
+        </div>
         </div>
 </form>
